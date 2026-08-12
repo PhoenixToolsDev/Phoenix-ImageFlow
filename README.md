@@ -66,7 +66,15 @@ Phoenix ImageFlow processes images locally on your computer. Images are not uplo
 
 ## Related Phoenix tool
 
-[Phoenix Catalog Proof](https://apify.com/phoenix-tools/phoenix-catalog-proof) compares approved and current ecommerce catalogs before migrations, feed uploads, marketplace syncs, campaigns or client handovers. It accepts CSV, JSON, XML, inline data, public feed URLs and Apify datasets, then produces HTML, CSV and JSON evidence reports. The Actor is read-only, requires no store login, and costs $0.05 per catalog comparison.
+### Catch catalog mistakes before customers do
+
+[Phoenix Catalog Proof](https://apify.com/phoenix-tools/phoenix-catalog-proof) compares approved and current ecommerce catalogs before migrations, feed uploads, marketplace syncs, campaigns or client handovers. It flags removed products, price and stock changes, duplicate identifiers, missing images, broken links and canonical mismatches, then creates HTML, CSV and JSON evidence reports.
+
+- **Try it quickly:** copy the ready-made [baseline/current catalog demo](CATALOG_PROOF_DEMO.md).
+- **Run the Actor:** [open Phoenix Catalog Proof on Apify](https://apify.com/phoenix-tools/phoenix-catalog-proof).
+- **Pricing:** $0.05 per catalog comparison; Apify shows the exact charge before a run.
+
+The Actor accepts CSV, JSON, XML, inline data, public feed URLs and Apify datasets. It is read-only, requires no store login or external API key, and keeps the full finding list in the run dataset.
 
 ## License
 
