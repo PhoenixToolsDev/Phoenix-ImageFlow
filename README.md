@@ -64,7 +64,10 @@ Phoenix ImageFlow processes images locally on your computer. Images are not uplo
 - [Premium license](https://payhip.com/b/Wexo0)
 - [Phoenix Tools on Payhip](https://payhip.com/PhoenixTools)
 
+## Related Phoenix tool
+
+[Phoenix Catalog Proof](https://apify.com/phoenix-tools/phoenix-catalog-proof) compares approved and current ecommerce catalogs before migrations, feed uploads, marketplace syncs, campaigns or client handovers. It accepts CSV, JSON, XML, inline data, public feed URLs and Apify datasets, then produces HTML, CSV and JSON evidence reports. The Actor is read-only, requires no store login, and costs $0.05 per catalog comparison.
+
 ## License
 
 Phoenix ImageFlow is proprietary software. The Lite edition may be used free of charge for personal and commercial purposes. The source code is not distributed through this repository.
-
