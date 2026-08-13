@@ -8,7 +8,19 @@ Phoenix ImageFlow is a fast, privacy-friendly Windows application for batch resi
 
 It is designed for online sellers, webshops, photographers and anyone who regularly needs to prepare multiple images.
 
-[Download the latest release](../../releases/latest)
+[Download the latest release](../../releases/latest) · [Get the free Lite edition](https://payhip.com/b/OGJt3) · [One-time Premium license](https://payhip.com/b/Wexo0)
+
+## Built for repeatable photography workflows
+
+ImageFlow helps photographers, property photographers and small studios prepare consistent delivery copies without uploading client images or overwriting camera masters.
+
+- Resize a full shoot to a consistent long edge
+- Rename delivery files in a predictable sequence
+- Convert and compress web-ready copies offline
+- Add an optional watermark to preview sets
+- Keep originals untouched in a separate source folder
+
+See the public [photographer workflow and feedback thread](https://github.com/PhoenixToolsDev/Phoenix-ImageFlow/issues/4) or follow the [offline product-photography workflow](https://phoenix-tools.michel-goossens99.chatgpt.site/offline-product-photography-workflow-windows).
 
 ![Phoenix ImageFlow application](Phoenix-ImageFlow-Screenshot.png)
 
