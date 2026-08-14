@@ -80,7 +80,7 @@ Phoenix ImageFlow processes images locally on your computer. Images are not uplo
 
 ### Catch catalog mistakes before customers do
 
-[Phoenix Catalog Proof](https://apify.com/phoenix-tools/phoenix-catalog-proof) compares approved and current ecommerce catalogs before migrations, feed uploads, marketplace syncs, campaigns or client handovers. It flags removed products, price and stock changes, duplicate identifiers, missing images, broken links and canonical mismatches, then creates HTML, CSV and JSON evidence reports.
+[Phoenix Catalog Proof](https://apify.com/phoenix-tools/phoenix-catalog-proof) compares approved and current ecommerce catalogs before migrations, feed uploads, marketplace syncs, campaigns or client handovers. For recurring supplier feeds, use it as a regression gate: compare each fresh export with the approved baseline before publishing. It flags removed products, price and stock changes, duplicate identifiers, missing images, broken links and canonical mismatches, then creates HTML, CSV and JSON evidence reports.
 
 - **Start here:** open the [Catalog Proof developer hub](CATALOG_PROOF_HUB.md).
 - **Try it quickly:** copy the ready-made [baseline/current catalog demo](CATALOG_PROOF_DEMO.md).
