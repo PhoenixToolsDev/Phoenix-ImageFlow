@@ -1,0 +1,61 @@
+{
+  "info": {
+    "_postman_id": "b36b4b5b-a241-48b5-8246-9b9d47ed9b1c",
+    "name": "Phoenix Audit Suite API",
+    "description": "Four public Phoenix Tools endpoints. No Phoenix API key is required. Requests run only when you send them; this collection contains no scheduler. Use public URLs or text you are authorized to process and verify results against their source.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://phoenix-tools.michel-goossens99.chatgpt.site",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Accessibility Pre-Audit",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json", "type": "text" }],
+        "body": { "mode": "raw", "raw": "{\n  \"url\": \"https://example.com\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": { "raw": "{{baseUrl}}/api/accessibility-pre-audit", "host": ["{{baseUrl}}"], "path": ["api", "accessibility-pre-audit"] },
+        "description": "Bounded accessibility pre-audit of one public page. This is not a certification or substitute for manual WCAG testing."
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test(\"Successful response\", function () { pm.expect(pm.response.code).to.be.oneOf([200]); });", "pm.test(\"JSON response\", function () { pm.response.to.be.json; });"] } }]
+    },
+    {
+      "name": "Website Security Baseline",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json", "type": "text" }],
+        "body": { "mode": "raw", "raw": "{\n  \"url\": \"https://example.com\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": { "raw": "{{baseUrl}}/api/website-security-baseline", "host": ["{{baseUrl}}"], "path": ["api", "website-security-baseline"] },
+        "description": "Passive, bounded inspection of one public URL. It does not exploit, authenticate to, or modify the target and is not a penetration test."
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test(\"Successful response\", function () { pm.expect(pm.response.code).to.be.oneOf([200]); });", "pm.test(\"JSON response\", function () { pm.response.to.be.json; });"] } }]
+    },
+    {
+      "name": "Product Price & Availability Snapshot",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json", "type": "text" }],
+        "body": { "mode": "raw", "raw": "{\n  \"url\": \"https://example.com/product\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": { "raw": "{{baseUrl}}/api/product-price-monitor", "host": ["{{baseUrl}}"], "path": ["api", "product-price-monitor"] },
+        "description": "Single public product-page snapshot. The request does not create a schedule; store returned snapshots in your own workflow if you want to compare them."
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test(\"Successful response\", function () { pm.expect(pm.response.code).to.be.oneOf([200]); });", "pm.test(\"JSON response\", function () { pm.response.to.be.json; });"] } }]
+    },
+    {
+      "name": "Tender & RFP Requirements Analyzer",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json", "type": "text" }],
+        "body": { "mode": "raw", "raw": "{\n  \"text\": \"RFP ACME-2026-17. Proposals are due 30 September 2026 at 17:00 UTC. Mandatory: ISO 27001 certification and three references.\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": { "raw": "{{baseUrl}}/api/tender-rfp-analyzer", "host": ["{{baseUrl}}"], "path": ["api", "tender-rfp-analyzer"] },
+        "description": "Extracts requirements from pasted text. Replace the body with {\"url\":\"https://example.com/public-rfp\"} for a public URL. Verify every result against the source before bidding."
+      },
+      "event": [{ "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test(\"Successful response\", function () { pm.expect(pm.response.code).to.be.oneOf([200]); });", "pm.test(\"JSON response\", function () { pm.response.to.be.json; });"] } }]
+    }
+  ]
+}
