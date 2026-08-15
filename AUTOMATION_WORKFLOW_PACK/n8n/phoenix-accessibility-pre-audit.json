@@ -1,0 +1,52 @@
+{
+  "name": "Phoenix - Website Accessibility Pre-Audit",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "f21af0aa-24f1-4fb7-8ab8-b63a0d8caf01",
+      "name": "Manual trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [260, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            { "id": "e950a637-1016-4e51-a5d2-e4ce49839201", "name": "targetUrl", "value": "https://example.com", "type": "string" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "be1a09de-40c2-4852-a02e-ea907551b302",
+      "name": "Set input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/accessibility-pre-audit",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [{ "name": "Content-Type", "value": "application/json" }] },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ url: $json.targetUrl }) }}",
+        "options": { "timeout": 30000 }
+      },
+      "id": "6a3ba34d-8c60-4f96-b9bb-7b87831b7403",
+      "name": "Run Phoenix pre-audit",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [760, 300]
+    }
+  ],
+  "connections": {
+    "Manual trigger": { "main": [[{ "node": "Set input", "type": "main", "index": 0 }]] },
+    "Set input": { "main": [[{ "node": "Run Phoenix pre-audit", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {},
+  "settings": { "executionOrder": "v1" }
+}
