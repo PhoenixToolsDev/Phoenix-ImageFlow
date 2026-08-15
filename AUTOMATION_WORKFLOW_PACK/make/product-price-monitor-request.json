@@ -1,0 +1,9 @@
+{
+  "module": "HTTP > Make a request",
+  "method": "POST",
+  "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/product-price-monitor",
+  "headers": { "Content-Type": "application/json" },
+  "body": { "url": "https://example.com" },
+  "parseResponse": true,
+  "note": "Supports public Product/Offer JSON-LD or Open Graph signals. Store any history only where you explicitly choose."
+}
