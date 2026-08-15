@@ -92,6 +92,8 @@ The Actor accepts CSV, JSON, XML, inline data, public feed URLs and Apify datase
 
 ## Automation workflow pack
 
+**Developer start:** [open the Phoenix Audit Suite API v1.0 hub](AUDIT_SUITE_API.md) for all four endpoints, import files and quick-start examples.
+
 Use the free [Phoenix Automation Workflow Pack](AUTOMATION_WORKFLOW_PACK/README.md) to import four manual n8n workflows or copy matching Make HTTP recipes for accessibility pre-audits, passive security-header checks, product price snapshots and tender/RFP requirement extraction.
 
 - [Open the live workflow pack](https://phoenix-tools.michel-goossens99.chatgpt.site/automation-workflow-pack)
