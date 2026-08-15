@@ -97,6 +97,8 @@ Use the free [Phoenix Automation Workflow Pack](AUTOMATION_WORKFLOW_PACK/README.
 - [Open the live workflow pack](https://phoenix-tools.michel-goossens99.chatgpt.site/automation-workflow-pack)
 - [Download the complete ZIP](https://phoenix-tools.michel-goossens99.chatgpt.site/downloads/Phoenix_Automation_Workflow_Pack_v1.0.zip)
 - [Run the Tender/RFP Analyzer API demo](TENDER_RFP_ANALYZER_API_DEMO.md) with copy-paste curl and JavaScript examples
+- [Import the OpenAPI 3.1 specification](PHOENIX_AUDIT_SUITE_OPENAPI.json) in API clients and code generators
+- [Import the Postman collection](PHOENIX_AUDIT_SUITE.postman_collection.json) for four ready-to-send requests
 - No Phoenix API credentials required; workflows run manually and make one bounded request
 
 ## License
