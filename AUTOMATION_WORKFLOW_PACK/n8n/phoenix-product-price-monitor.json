@@ -1,0 +1,24 @@
+{
+  "name": "Phoenix - Product Price and Availability Snapshot",
+  "nodes": [
+    { "parameters": {}, "id": "4e95c776-bf7c-48ef-a058-b9f5d63a9421", "name": "Manual trigger", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [260, 300] },
+    {
+      "parameters": { "assignments": { "assignments": [{ "id": "a23d8537-9586-4adf-9be0-b048b1661c22", "name": "productUrl", "value": "https://example.com", "type": "string" }] }, "options": {} },
+      "id": "df7c2412-0ba1-4f0d-a0ca-588a2d286823", "name": "Set input", "type": "n8n-nodes-base.set", "typeVersion": 3.4, "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST", "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/product-price-monitor",
+        "sendHeaders": true, "headerParameters": { "parameters": [{ "name": "Content-Type", "value": "application/json" }] },
+        "sendBody": true, "contentType": "raw", "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ url: $json.productUrl }) }}", "options": { "timeout": 30000 }
+      },
+      "id": "5f2ee926-5f89-4083-9fa7-e4390337ef24", "name": "Capture Phoenix snapshot", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [760, 300]
+    }
+  ],
+  "connections": {
+    "Manual trigger": { "main": [[{ "node": "Set input", "type": "main", "index": 0 }]] },
+    "Set input": { "main": [[{ "node": "Capture Phoenix snapshot", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {}, "settings": { "executionOrder": "v1" }
+}
