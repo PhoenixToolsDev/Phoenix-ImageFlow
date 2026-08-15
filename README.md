@@ -89,6 +89,15 @@ Phoenix ImageFlow processes images locally on your computer. Images are not uplo
 
 The Actor accepts CSV, JSON, XML, inline data, public feed URLs and Apify datasets. It is read-only, requires no store login or external API key, and keeps the full finding list in the run dataset.
 
+
+## Automation workflow pack
+
+Use the free [Phoenix Automation Workflow Pack](AUTOMATION_WORKFLOW_PACK/README.md) to import four manual n8n workflows or copy matching Make HTTP recipes for accessibility pre-audits, passive security-header checks, product price snapshots and tender/RFP requirement extraction.
+
+- [Open the live workflow pack](https://phoenix-tools.michel-goossens99.chatgpt.site/automation-workflow-pack)
+- [Download the complete ZIP](https://phoenix-tools.michel-goossens99.chatgpt.site/downloads/Phoenix_Automation_Workflow_Pack_v1.0.zip)
+- No Phoenix API credentials required; workflows run manually and make one bounded request
+
 ## License
 
 Phoenix ImageFlow is proprietary software. The Lite edition may be used free of charge for personal and commercial purposes. The source code is not distributed through this repository.
