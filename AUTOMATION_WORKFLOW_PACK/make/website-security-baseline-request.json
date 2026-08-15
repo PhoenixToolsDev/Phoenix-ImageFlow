@@ -1,0 +1,9 @@
+{
+  "module": "HTTP > Make a request",
+  "method": "POST",
+  "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/website-security-baseline",
+  "headers": { "Content-Type": "application/json" },
+  "body": { "url": "https://example.com" },
+  "parseResponse": true,
+  "note": "One passive public-page request chain only. No port scan, crawling, exploitation or certification."
+}
