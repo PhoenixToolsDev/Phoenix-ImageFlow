@@ -1,0 +1,9 @@
+{
+  "module": "HTTP > Make a request",
+  "method": "POST",
+  "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/tender-rfp-analyzer",
+  "headers": { "Content-Type": "application/json" },
+  "body": { "text": "Public Website Support Services — Request for Proposal\nRFP reference: CITY-2026-WEB-14\nSubmission deadline: 30 September 2026 at 17:00 CET.\nScope: website maintenance and accessibility fixes for 12 months.\nThe supplier must demonstrate three years of relevant experience.\nProposals must be submitted through the procurement portal.\nEstimated contract value: EUR 48,000.\nEvaluation criteria: quality 60%, price 30%." },
+  "parseResponse": true,
+  "note": "Use user-supplied text or change the body to one public HTML URL. No legal, eligibility or bid-submission decision."
+}
