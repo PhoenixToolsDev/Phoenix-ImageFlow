@@ -1,0 +1,24 @@
+{
+  "name": "Phoenix - Website Security Baseline",
+  "nodes": [
+    { "parameters": {}, "id": "c15c03f2-9875-4d03-8728-018cc9c76311", "name": "Manual trigger", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [260, 300] },
+    {
+      "parameters": { "assignments": { "assignments": [{ "id": "f40ae4f4-673b-426e-a220-4836fe7cd312", "name": "targetUrl", "value": "https://example.com", "type": "string" }] }, "options": {} },
+      "id": "47676353-ce2e-4c4e-a51f-8cd7735c6713", "name": "Set input", "type": "n8n-nodes-base.set", "typeVersion": 3.4, "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST", "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/website-security-baseline",
+        "sendHeaders": true, "headerParameters": { "parameters": [{ "name": "Content-Type", "value": "application/json" }] },
+        "sendBody": true, "contentType": "raw", "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ url: $json.targetUrl }) }}", "options": { "timeout": 30000 }
+      },
+      "id": "e8f2f463-2d2f-496e-a261-648185504114", "name": "Run Phoenix baseline", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [760, 300]
+    }
+  ],
+  "connections": {
+    "Manual trigger": { "main": [[{ "node": "Set input", "type": "main", "index": 0 }]] },
+    "Set input": { "main": [[{ "node": "Run Phoenix baseline", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {}, "settings": { "executionOrder": "v1" }
+}
