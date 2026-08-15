@@ -1,0 +1,30 @@
+{
+  "name": "Phoenix - Tender and RFP Requirements Extraction",
+  "nodes": [
+    { "parameters": {}, "id": "b642240f-4d2f-46bf-b84e-42e1ae8a6531", "name": "Manual trigger", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [260, 300] },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            { "id": "f844d053-7ecb-4d37-861e-a7de949d1f32", "name": "tenderText", "value": "Public Website Support Services — Request for Proposal\nRFP reference: CITY-2026-WEB-14\nSubmission deadline: 30 September 2026 at 17:00 CET.\nScope: website maintenance and accessibility fixes for 12 months.\nThe supplier must demonstrate three years of relevant experience.\nProposals must be submitted through the procurement portal.\nEstimated contract value: EUR 48,000.\nEvaluation criteria: quality 60%, price 30%.", "type": "string" }
+          ]
+        }, "options": {}
+      },
+      "id": "0082fd68-2a2a-4946-9b9d-d8c3b2b0ae33", "name": "Set input", "type": "n8n-nodes-base.set", "typeVersion": 3.4, "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST", "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/tender-rfp-analyzer",
+        "sendHeaders": true, "headerParameters": { "parameters": [{ "name": "Content-Type", "value": "application/json" }] },
+        "sendBody": true, "contentType": "raw", "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ text: $json.tenderText }) }}", "options": { "timeout": 30000 }
+      },
+      "id": "1574f615-d77e-4dc8-830f-78dcc0aa1f34", "name": "Extract Phoenix requirements", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [760, 300]
+    }
+  ],
+  "connections": {
+    "Manual trigger": { "main": [[{ "node": "Set input", "type": "main", "index": 0 }]] },
+    "Set input": { "main": [[{ "node": "Extract Phoenix requirements", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {}, "settings": { "executionOrder": "v1" }
+}
