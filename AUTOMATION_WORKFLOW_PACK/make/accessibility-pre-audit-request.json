@@ -1,0 +1,9 @@
+{
+  "module": "HTTP > Make a request",
+  "method": "POST",
+  "url": "https://phoenix-tools.michel-goossens99.chatgpt.site/api/accessibility-pre-audit",
+  "headers": { "Content-Type": "application/json" },
+  "body": { "url": "https://example.com" },
+  "parseResponse": true,
+  "note": "Replace the example with one public HTML page URL. No certification or WCAG compliance claim."
+}
